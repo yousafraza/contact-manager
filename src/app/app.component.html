@@ -1,0 +1,12 @@
+<main class="container">    
+    <section class="contacts">
+        <app-contact-list 
+            [selectedContact]="selectedContact" 
+            (signal)="onSelectContact($event)">
+        </app-contact-list>
+    </section>
+    
+    <section class="contact-details" *ngIf="selectedContact">
+        <app-contact-details [selectedContact]="selectedContact"></app-contact-details>
+    </section>
+</main>

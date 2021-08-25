@@ -1,0 +1,61 @@
+<div style="display: flex; margin-bottom: 20px;">
+    <img [src]="selectedContact.image" alt="No Image" class="image-large">
+    <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: column;">
+            <div class="select-contact-name">{{selectedContact.name}}</div>
+            <div class="select-contact-designation">{{selectedContact.designation}}</div>
+        </div>
+        <div class="actions">
+            <button mat-raised-button color="primary" style="margin-right: 10px;">Message</button>
+            <button mat-stroked-button style="margin-right: 10px;">
+                <mat-icon>call</mat-icon>
+            </button>
+            <button mat-stroked-button style="margin-right: 10px;">
+                <mat-icon>upload</mat-icon>
+            </button>
+            <button mat-stroked-button>
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div style="display: flex; flex-direction: column;">
+    <div class="detail-item">
+        <div class="heading">bio</div> 
+        <div class="flex-1">{{selectedContact.bio}}</div>
+    </div>
+    <div class="detail-item">
+        <div class="heading">email</div> 
+        <div class="flex-1">{{selectedContact.emails}}</div>
+    </div>
+    <div class="detail-item">
+        <div class="heading">Dial</div> 
+        <div class="flex-1">{{selectedContact.dial}}</div>
+    </div>
+    <div class="detail-item">
+        <div class="heading">Meeting</div> 
+        <div class="flex-1">{{selectedContact.meeting}}</div>
+    </div>
+    <div class="detail-item">
+        <div class="heading">Phone</div> 
+        <div class="flex-1">{{selectedContact.phones}}</div>
+    </div>
+    <div class="detail-item">
+        <div class="heading">Socials</div> 
+        <div class="d-flex social-btns">
+            <button mat-stroked-button class="gap-10">
+                <img class="social-icon" src="assets/images/facebook.png" alt="">
+            </button>
+            <button mat-stroked-button class="gap-10">
+                <img class="social-icon" src="assets/images/linkedin.png" alt="">
+            </button>
+            <button mat-stroked-button class="gap-10">
+                <img class="social-icon" src="assets/images/pinterest.png" alt="">
+            </button>
+            <button mat-stroked-button>
+                <img class="social-icon" src="assets/images/twitter.png" alt="">
+            </button>
+        </div>
+    </div>
+</div>

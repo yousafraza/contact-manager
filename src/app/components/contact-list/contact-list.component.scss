@@ -1,0 +1,143 @@
+.header {
+  border-bottom: 1px solid #ECEEF5;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-size: 18px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0 25px 0;
+
+  .label {
+    color: #8083A3;
+  }
+
+  .input-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-right: 1px solid #ECEEF5;
+  }
+
+  input {
+    background: none;
+    color: #1A1C1D;
+    border: none;
+    padding: 10px 0 10px 0;
+    font-size: 16px;
+    width: 90%;
+
+    &:focus {
+      padding-left: 5px;
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 600;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 153px);
+  overflow: auto;
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+
+    .image {
+      width: 40px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .status {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 3px;
+      right: -3px;
+    }
+
+    .online {
+      background: green;
+      border: 2px solid #faf9ff;
+    }
+
+    .offline {
+      background-color: #F6933E;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: #1A1C1D;
+    }
+
+    .designation {
+      color: #8083A3;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+      font-size: 18px;
+      vertical-align: bottom;
+      color: #8083A3;
+    }
+  }
+
+  .selected {
+    .mat-stroked-button {
+      background: linear-gradient(0deg, rgba(77, 76, 172, 0.1), rgba(77, 76, 172, 0.1)), #FFFFFF;
+    }
+  }
+}
+
+.mat-stroked-button {
+  padding: 0 !important;
+  min-width: 40px;
+  border-radius: 8px;
+
+  &:disabled {
+    background-color: #f8f8f8;
+    opacity: 0.5;
+  }
+
+  mat-icon {
+    font-size: 18px;
+    vertical-align: bottom;
+    color: #8083A3;
+  }
+}

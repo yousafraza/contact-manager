@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    height: 96vh;
+    width: 100%;
+    margin: 0 auto;
+
+    .contacts {
+        background-color: #FAF9FF;
+        flex: 0 1 40%;
+        margin-right: 90px;
+        padding: 0 24px;    
+    }
+    
+    .contact-details {
+        flex: 1;
+        margin-top: 75px;
+    }
+}

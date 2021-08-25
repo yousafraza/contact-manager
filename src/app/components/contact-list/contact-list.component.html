@@ -1,0 +1,53 @@
+<div class="header">
+    <div class="left">
+        <button mat-stroked-button style="margin-right: 10px;">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="title">Contacts</div>
+    </div>
+    <div class="right">
+        <button [disabled]="offset <= 0" mat-stroked-button style="margin-right: 10px;" (click)="moveLeft()">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <button mat-stroked-button [disabled]="offset >= data.length - limit" (click)="moveRight()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</div>
+
+<div class="search">
+    <div class="input-area">
+        <div class="label">Search for a contact</div>
+        <input type="text" [formControl]="searchFC" placeholder="Name, email or phone number">
+    </div>
+    <mat-icon style="cursor: pointer;">search</mat-icon>
+</div>
+
+<div class="content">
+    <div class="contact" [class.selected]="contact === selectedContact" 
+        *ngFor="let contact of contactPerPage" 
+        (click)="onSelectContact(contact)">
+        <div style="display: flex; justify-content: center;">
+            <div style="margin-right: 10px; position: relative;">
+                <img [src]="contact.image" alt="No Image" class="image" *ngIf="contact.image != ''">
+                <div class="status" [class]="contact.status"></div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <div class="name">{{contact.name}}</div>
+                <div class="designation">{{contact.designation}}</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button mat-stroked-button style="margin-right: 10px;">
+                <mat-icon>forum</mat-icon>
+            </button>
+            <button mat-stroked-button style="margin-right: 10px;">
+                <mat-icon>call</mat-icon>
+            </button>
+            <button mat-stroked-button>
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
